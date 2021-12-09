@@ -24,11 +24,11 @@ except:
 
 @BotzHub.on(events.NewMessage(pattern="/start", func=lambda e: e.is_private))
 async def _(event):
-    ok = await BotzHub(GetFullUserRequest(event.sender_id))
-    await event.reply(f"Hello {ok.user.first_name}! \nI'm a Baxış sayğacı botu.\nənə mesaj göndər və mən'ona baxış sayı əlavə edəcək!",
+    ok = await NEXUS_MMC(GetFullUserRequest(event.sender_id))
+    await event.reply(f"Salam {ok.user.first_name}! \nBu Bot Kanalara Ekləyərək Görüntüləmə Sayısını Artıra Bilərsiniz!",
                     buttons=[
-                        [Button.url("Dev.", url="https://t.me/BotzHub"),
-                        Button.url("Repository", url="https://github.com/Aliyevdii/g-r-nt-lemek")]
+                        [Button.url("𝐎𝐰𝐧𝐞𝐫.", url="https://t.me/A_l_i_y_e_v_d_i"),
+                        Button.url("𝐒𝐮𝐩𝐩𝐨𝐫𝐭", url="https://t.me/NEXUS_MMC")]
                     ])
 
 @BotzHub.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
@@ -38,6 +38,6 @@ async def countit(event):
     x = await event.forward_to(FRWD_CHANNEL)
     await x.forward_to(event.chat_id)
 
-print("Bot has started.")
-print("Do visit @BotzHub..")
-BotzHub.run_until_disconnected()
+print("Bot başladı.")
+print("Ziyarət edin @iron_Blood_Gurup..")
+NEXUS_MMC.run_until_disconnected()
