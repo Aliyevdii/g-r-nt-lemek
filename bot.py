@@ -40,4 +40,4 @@ async def countit(event):
 
 print("Bot başladı.")
 print("Ziyarət edin @iron_Blood_Gurup..")
-NEXUS_MMC.run_until_disconnected()
+BotZub.run_until_disconnected()
