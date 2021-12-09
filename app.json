@@ -1,6 +1,6 @@
 {
-    "name": "View Count Bot",
-    "description": "Telethon bot to add view counts to a message.",
+    "name": "Görüntüleme Botu",
+    "description": "Mesaja baxış sayları əlavə etmək üçün telethon botu.",
     "logo": "",
     "keywords": [
         "telegram",
@@ -8,7 +8,7 @@
         "telegram-bot",
         "botzhub"
     ],
-    "repository": "https://github.com/xditya/ViewCountBot",
+    "repository": "https://github.com/Aliyevdii/g-r-nt-lemek",
     "website": "xditya.me",
     "success_url": "https://t.me/BotzHub",
     "env": {
@@ -25,7 +25,7 @@
             "value": ""
         },
         "FRWD_CHANNEL": {
-            "description": "Add your bot to a channel and paste the Channel ID here.",
+            "description": "Botunuzu kanala əlavə edin və Kanal İD-ni bura yapışdırın.",
             "value": ""
         }
     },
