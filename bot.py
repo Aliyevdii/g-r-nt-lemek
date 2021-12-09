@@ -18,16 +18,16 @@ try:
     FRWD_CHANNEL = config("FRWD_CHANNEL", cast=int)
     BotzHub = TelegramClient('BotzHub', apiid, apihash).start(bot_token=bottoken)
 except:
-    print("Ətraf mühitin xüsusiyyətləri yoxdur! Zəhmət olmasa, yenidən yoxlayın.")
+    print("Ətraf mühitin xüsusiyyətləri yoxdur! Zəhmət olmasa yenidən yoxlayın.")
     print("Bot tərk edir...")
     exit()
 
 @BotzHub.on(events.NewMessage(pattern="/start", func=lambda e: e.is_private))
 async def _(event):
-    ok = await NEXUS_MMC(GetFullUserRequest(event.sender_id))
-    await event.reply(f"Salam {ok.user.first_name}! \nBu Bot Kanalara Ekləyərək Görüntüləmə Sayısını Artıra Bilərsiniz!",
+    ok = await BotzHub(GetFullUserRequest(event.sender_id))
+    await event.reply(f"Salam {ok.user.first_name}! \nMən baxış sayğac botuyam.\nMəni kanallara ekləyərəm baxış sayını artïra bilərsiniz",
                     buttons=[
-                        [Button.url("𝐎𝐰𝐧𝐞𝐫.", url="https://t.me/A_l_i_y_e_v_d_i"),
+                        [Button.url("𝐎𝐰𝐧𝐞𝐫", url="https://t.me/A_l_i_y_e_v_d_i"),
                         Button.url("𝐒𝐮𝐩𝐩𝐨𝐫𝐭", url="https://t.me/NEXUS_MMC")]
                     ])
 
@@ -39,5 +39,5 @@ async def countit(event):
     await x.forward_to(event.chat_id)
 
 print("Bot başladı.")
-print("Ziyarət edin @iron_Blood_Gurup..")
-BotZub.run_until_disconnected()
+print("Ziyarət edin @NEXUS_MMC..")
+BotzHub.run_until_disconnected()
